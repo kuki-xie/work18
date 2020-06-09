@@ -8,6 +8,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Choose: 1-create 2-output 3-search 0-exit");
         int choose = sc.nextInt();
+
         while (choose != 0) {
             if(choose==1)
             {
