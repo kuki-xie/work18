@@ -1,7 +1,7 @@
-package homework4.Operation;
+package homework4y.Operation;
 
-import homework4.Book.Book;
-import homework4.Book.BookData;
+import homework4y.Book.Book;
+import homework4y.Book.BookData;
 import java.util.Scanner;
 
 public class addBook implements Operation {

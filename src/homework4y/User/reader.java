@@ -1,10 +1,10 @@
-package homework4.User;
+package homework4y.User;
 
-import homework4.Operation.Operation;
-import homework4.Operation.addBook;
-import homework4.Operation.deleteBook;
-import homework4.Operation.esc;
-import homework4.Operation.searchBook;
+import homework4y.Operation.Operation;
+import homework4y.Operation.addBook;
+import homework4y.Operation.deleteBook;
+import homework4y.Operation.esc;
+import homework4y.Operation.searchBook;
 import java.util.Scanner;
 
 public class reader extends User{
@@ -22,13 +22,12 @@ public class reader extends User{
   public int menu() {
     System.out.println("请输入选择");
     System.out.println("=============");
-    System.out.println("=====1.======");
-    System.out.println("=====2.======");
-    System.out.println("=====3.======");
-    System.out.println("=====4.======");
+    System.out.println("=====0.退出======");
+    System.out.println("=====1.查书======");
+    System.out.println("=====2.增书======");
+    System.out.println("=====3.删书======");
     System.out.println("=============");
     Scanner in=new Scanner(System.in);
-    int choice=in.nextInt();
-    return choice;
+    return in.nextInt();
   }
 }

@@ -1,61 +1,53 @@
 package homework4.Book;
 
+import java.util.ArrayList;
+import javax.naming.Name;
+
 public class Book {
   private String name; // 书名
-  private boolean state;
-  private String writer; // 作者
-  private String publish; // 出版社
+  ArrayList<String> author = new ArrayList<>(); // 多个作者
+  private String press; // 出版社
   private int number; // 数量
 
-  public Book(String name, boolean state, String writer, String publish, int number) {
+  public Book(String name, ArrayList<String> author, String press, int number) {
     this.name = name;
-    this.state = state;
-    this.writer = writer;
-    this.publish = publish;
+    for (String s : author) {
+      this.author.add(s);
+    }
+    this.press = press;
     this.number = number;
   }
 
   public String getName() {
-    return name;
+    return this.name;
   }
 
-  public void setName(String s) {
-    this.name = s;
+  public ArrayList<String> getAuthor() {
+    return this.author;
   }
 
-  public String setName() {
-    return name;
-  }
-
-  public String getWritter() {
-    return writer;
-  }
-
-  public void setWriter(String s) {
-    this.writer = s;
-  }
-
-  public String getPublish() {
-    return publish;
-  }
-
-  public void setPublish(String s) {
-    this.publish = s;
+  public String getPress() {
+    return this.press;
   }
 
   public int getNumber() {
-    return number;
+    return this.number;
   }
 
-  public void setNumber(int i) {
-    this.number = i;
+  public void setName(String name) {
+    this.number = number;
   }
 
-  public boolean getState() {
-    return state;
+  public void setPress(String press) {
+    this.press = press;
   }
 
-  public void setState(boolean b) {
-    this.state = b;
+  public void setNumber(int number) {
+    this.number = number;
+  }
+
+  public String toString() {
+    // 重写toString()方法
+    return "[" + "书名:" + name + " 作者" + author + " 出版社" + press + " 数量" + number + "]";
   }
 }
