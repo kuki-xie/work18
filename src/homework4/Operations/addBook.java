@@ -52,7 +52,7 @@ public class addBook extends Operation {
       if (data.getbookMap().get(key).getName().equalsIgnoreCase(name)
           && data.getbookMap().get(key).getPress().equalsIgnoreCase(press)) {
         flag = false;
-        data.getbookMap().get(key).setNumber(number + 1);
+        data.getbookMap().get(key).number1=;
         System.out.println("|          老书添加成功          |");
         System.out.println(data.getbookMap().get(key).toString());
         break;

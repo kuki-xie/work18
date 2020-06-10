@@ -6,16 +6,18 @@ import java.util.Map;
 
 public class Data {
   Map<Integer, Book> bookMap = new HashMap<Integer, Book>();
-
+  int number1=10;
+  int number2=20;
+  int number3=10;
   public Data() {
     ArrayList<String> author1 = new ArrayList<String>();
     author1.add("郎波");
-    int number1=10;
+
     Book book1 = new Book("Java语言程序设计", author1, "清华大学出版社", number1);
 
     ArrayList<String> author2 = new ArrayList<String>();
     author2.add("同济大学数学系");
-    int number2=20;
+
     Book book2 = new Book("高等数学", author2, "同济大学出版社", number2);
 
     ArrayList<String> author3 = new ArrayList<String>();
@@ -23,7 +25,7 @@ public class Data {
     author3.add("黄健斌");
     author3.add("尹忠海");
     author3.add("毛立强");
-    int number3=10;
+
     Book book3 = new Book("离散数学", author3, "西安电子科技大学出版社", number3);
 
     bookMap.put(1, book1);
