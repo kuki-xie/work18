@@ -7,13 +7,13 @@ public class searchBook implements Operation {
 
   @Override
   public void opear(BookData bd) {
-    System.out.println("请输入选择 1. 2. 3. 0.");
+    System.out.println("请输入选择 1.按书名查找 2.按作者查找 3.按出版社查找 0.退出");
     Scanner sc = new Scanner(System.in);
     while (true) {
       int choice = sc.nextInt();
       switch (choice) {
         case 1:
-          System.out.println("执行1.");
+          System.out.println("请输入书名");
           String name1 = sc.next();
           boolean flag = false;
           for (Integer key : bd.getBookList().keySet()) {
@@ -33,7 +33,7 @@ public class searchBook implements Operation {
           if (!flag) System.out.println("没有这书");
 
         case 2:
-          System.out.println("2");
+          System.out.println("请输入作者");
           String writer1 = sc.next();
           flag = false;
           for (Integer key : bd.getBookList().keySet()) {
@@ -44,7 +44,7 @@ public class searchBook implements Operation {
           }
           if (!flag) System.out.println("未找到");
         case 3:
-          System.out.println("3");
+          System.out.println("请输入出版社");
           String publish = sc.next();
           flag = false;
           for (Integer key : bd.getBookList().keySet()) {
@@ -61,7 +61,7 @@ public class searchBook implements Operation {
               flag = true;
             }
           }
-          if (!flag) System.out.println("3");
+          if (!flag) System.out.println("未找到");
         case 0:
           break;
       }

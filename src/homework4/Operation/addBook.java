@@ -30,7 +30,7 @@ public class addBook implements Operation {
     }
     if (!flag) {
       bd.getBookList().put(bd.getBookList().size() + 1, book);
-      System.out.println("1" + name + "1");
+      System.out.println("" + name + "1");
       System.out.println("=================");
     }
   }

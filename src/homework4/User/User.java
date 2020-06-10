@@ -10,7 +10,7 @@ public abstract class User {
   public User(String name){
     this.name=name;
   }
-  abstract  int menu();
+  abstract public int menu();
   public void doOperation(int choice, BookData bookList){
     operations[choice].opear(bookList);
   }
