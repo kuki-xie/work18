@@ -1,16 +1,14 @@
 package homework4.Operations;
 
-import homework4.Book.Book;
 import homework4.Book.Data;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-
-public class addBook extends Operation {
+public class deleteBook extends Operation {
 
   @Override
   public void operation(Data data) {
+    Scanner in = new Scanner(System.in);
     System.out.println("----| Operation:addBook |----");
     System.out.println("|----------------------------|");
     System.out.println("|          已有图书           |");
@@ -19,8 +17,6 @@ public class addBook extends Operation {
     for (Integer key : data.getbookMap().keySet()) {
       System.out.println(data.getbookMap().get(key).toString());
     }
-    Scanner in = new Scanner(System.in);
-
     System.out.println("|----------------------------|");
     System.out.println("|          请输入书名          |");
     System.out.println("|----------------------------|");
@@ -41,26 +37,18 @@ public class addBook extends Operation {
     System.out.println("|----------------------------|");
     String press = in.next();
 
-    System.out.println("|----------------------------|");
-    System.out.println("|          请输入数量          |");
-    System.out.println("|----------------------------|");
-    int number = in.nextInt();
-
-    Book book = new Book(name, author, press, number);
     boolean flag = true;
     for (Integer key : data.getbookMap().keySet()) {
-      if (data.getbookMap().get(key).getName().equalsIgnoreCase(name)
-          && data.getbookMap().get(key).getPress().equalsIgnoreCase(press)) {
+      if (data.getbookMap().get(key).getName().equals(name)
+          && data.getbookMap().get(key).getPress().equals(press)) {
         flag = false;
-        data.getbookMap().get(key).setNumber(number + 1);
-        System.out.println("|          老书添加成功          |");
-        System.out.println(data.getbookMap().get(key).toString());
+        System.out.println(data.getbookMap().remove(key));
+        System.out.println("|           删除成功         |");
         break;
       }
-      if (flag) {
-        data.getbookMap().put(data.getbookMap().size() + 1, book);
-        System.out.println("|          新书添加成功          |");
-      }
+    }
+    if (flag) {
+      System.out.println("|          此书不存在          |");
     }
   }
 }

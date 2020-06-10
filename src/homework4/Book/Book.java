@@ -35,7 +35,7 @@ public class Book {
   }
 
   public void setName(String name) {
-    this.number = number;
+    this.name = name;
   }
 
   public void setPress(String press) {
