@@ -16,7 +16,7 @@ enum Coin {
   }
 }
 
-enum CoinColor {
+enum  CoinColor {
   COPPER,
   NICKEL,
   SILVER

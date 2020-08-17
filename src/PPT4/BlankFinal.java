@@ -2,7 +2,6 @@ package PPT4;
 
 class Poppet {
   private int i;
-
   Poppet(int ii) {
     i = ii;
   }

@@ -11,7 +11,7 @@ public class TestIterator {
     String[] strs = sentence.split(" ");
     List<String> list = new ArrayList<String>(Arrays.asList(strs));
     Iterator<String> it = list.iterator();
-    while (it.hasNext()) System.out.println(it.next() + "_");
+    while (it.hasNext()) System.out.print(it.next() + "_");
     System.out.println();
 
     it = list.iterator();
@@ -19,7 +19,7 @@ public class TestIterator {
       if (it.next().equals("I")) it.remove();
     }
     it = list.iterator();
-    while (it.hasNext()) System.out.println(it.next() + " ");
+    while (it.hasNext()) System.out.print(it.next() + " ");
     System.out.println();
   }
 }
