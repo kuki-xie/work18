@@ -26,7 +26,7 @@ public class Main {
         JudgeWeekday.getWeekday(pa);
         System.out.println("========================");
 
-        System.out.println("2.Print Calendar");
+        System.out.println("2.homework2.Print Calendar");
         System.out.println("Input the year");
         int year2=sc.nextInt();
         PrintCalendar.print(year2);
